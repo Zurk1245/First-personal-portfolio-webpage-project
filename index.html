@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>Portafolio personal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e8c0c516c3.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+
+   <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#welcome">Mariano</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#pre-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div id="redes-sociales">
+            <a href="https://www.instagram.com/mariano_mendezzz/?hl=es-la" target="_blank""><i class="fab fa-instagram icon-instagram" ></i></a>
+            <a href="https://github.com/Zurk1245" id="profile-link" target="_blank"> <i class="fab fa-github icon-github"></i></a>
+        </div>
+        
+   </header>     
+       
+
+    <br id="welcome"><br><br><br><br>
+    
+    <section id="welcome-section">
+        <h1 class="hola welcome">Mariano Mendez | Portafolio</h1>
+        <input type="checkbox" id="input-pop-up">
+        <label for="input-pop-up" id="boton-pop-up">Sobre mí</label>
+        
+        <div class="contenedor-pop-up">
+            
+            <div id="pop-up">
+                <label for="input-pop-up" class="close-pop-up">X</label>
+                <p class="description">Bienvenido! Me llamo Mariano, soy un joven de 19 años y estudiante de sistemas en la Universidad de Buenos Aires. Paralelamente a la universidad soy un front-end developer y me dedico a estudiar programación con profundidad, específicamente desarrollo web. 
+                    Me gusta resolver problemas, crear una buena experiencia de usuario, interfaces interesantes y páginas web tanto interactivas como originales. Tengo habilidades en...    
+                    </p>
+                    <ul class="icons">
+                        <i class="fab fa-html5 icon-html"></i>
+                        <i class="fab fa-css3-alt icon-css"></i>
+                        <i class="fab fa-js icon-js"></i>
+                        <i class="fab fa-git-alt icon-git"></i>
+                    </ul>
+            </div>
+        </div>
+        
+        
+               
+        <br>
+
+        <a  class="welcome" href=""></a><button id="link-cv" type="button">VER CV</button></a>
+
+
+        
+        </a>
+    </section>
+
+    <section id="projects"><br><br><br><br>
+        <h1 class="title-projects-section">Proyectos</h1>
+        <section class="contenedor">
+            <section id="Proyecto1" class="project-tile">
+                <h1 class="title-projects">Product landing page</h1>
+                <a href="https://zurk1245.github.io/Product-Landing-Page-Project/" target="_blank" rel="noopener noreferrer"><div class="product-landing-page"></div></a>
+                </section>
+    
+    
+                <section id="Proyecto2" class="project-tile">
+                    <h1 class="title-projects">Technical documentation page</h1>
+                    <a href="https://zurk1245.github.io/Technical-Documentation-Page/" target="_blank" rel="noopener noreferrer"><div class="technical-documentation-page"></div></a>
+                </section>
+    
+                <section id="Proyecto3" class="project-tile">
+                    <h1 class="title-projects">Survey form</h1>
+                    <a href="https://zurk1245.github.io/Formulario/" target="_blank" rel="noopener noreferrer"><div class="survey-form"></div></a>
+                </section>
+    
+                <section id="Proyecto4" class="project-tile">
+                    <h1 class="title-projects">Tribute page</h1>
+                    <a href="http://zurk1245.github.io/Tribute-page-Milton-Friedman/" target="_blank" rel="noopener noreferrer"><div class="tribute-page"></div></a>
+                </section>
+        </section>   
+    </section>
+
+    <div id="pre-contacto"><br><br><br><br><br>
+
+        <h3 class="title-contact">Hablemos!</h3>
+        
+    <section id="contacto">
+
+        <p id="text-contact" class="text-contact text-invitation">Estoy abierto a propuestas de trabajo, trabajos freelance o incluso para tomar algo y charlar! Saludos!
+        </p>
+
+        <form id="form" action="" class="text-contact">
+            <label class="label" for="Nombre">Nombre *</label><br>
+            <input type="text" id="Nombre" class="input" required><br>
+
+            <label class="label" for="Mail">E-Mail *</label><br>
+            <input type="email" id="Mail" class="input" required><br>
+
+            <label class="label" for="Mensaje">Mensaje *</label><br>
+            <textarea type="text" id="Mensaje" class="input" required></textarea><br>
+
+            <button type="submit" class="enviar">Enviar Mensaje</button>
+        </form>
+    </section>
+    </div>
+</body>
+</html>

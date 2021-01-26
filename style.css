@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(fancy-pants.jpg);    
+}
+
+p::selection {
+    background-color: crimson;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(98, 0, 255, 0.85);
+    font-family: 'Aclonica', sans-serif;
+    font-size: 2em;
+    z-index: 900;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+nav {
+    grid-column: 1/2;
+    display: flex;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 3px;    
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 200ms ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scale(1, 1);
+}
+
+nav li {   
+    margin-left: 80px;
+}
+
+#redes-sociales {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon-instagram {
+    font-size: 2em;
+    color: rgb(255, 8, 243);
+    margin-right: 60px;
+}
+
+.icon-github {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    margin-right: 60px;
+}
+
+#link-cv {
+    background-color: rgb(251, 255, 0);
+    font-family: 'Fraunces', serif;
+    font-size: 1.4em;
+    padding: .4em;
+    transition: background 300ms ease-out;
+    border-radius: 30px 60px;
+    cursor: pointer;
+}
+
+#link-cv:hover {
+    background: rgb(255, 145, 0);
+}
+
+#welcome-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 180px;   
+}
+
+.welcome {
+    margin: 15px;
+}
+
+#input-pop-up {
+    display: none;
+}
+
+#input-pop-up:checked ~ body {
+    overflow: hidden;
+}
+
+#input-pop-up:checked ~ .contenedor-pop-up {
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(0deg) translate(0%, 0%);
+    overflow-y: auto;
+}
+
+#boton-pop-up {
+    background-color: rgba(0, 204, 255, 0.6);
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+#boton-pop-up::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 60%;    
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 1.7em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transform-origin: bottom;
+    transition: transform 150ms ease-in-out;
+    margin: 0 auto;
+}
+
+#boton-pop-up:hover::after {
+    transform: scale(1, 1);
+}
+
+.contenedor-pop-up {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 300ms ease-in-out;
+    overflow: hidden;
+    z-index: 900;
+}
+
+
+
+#pop-up {
+    width: 500px;
+    height: 400px;
+    background-color: rgba(59, 57, 57, 0.801);
+    background-image: url(sky.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.close-pop-up {
+    background-color: white;
+    padding: 14px;
+    color: black;
+    border-radius: 50%;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    cursor: pointer;
+}
+
+
+#pop-up ul {
+    display: flex;
+    justify-content: center;
+}
+
+#pop-up ul i {
+    margin-left: 30px;
+}
+
+.hola {
+    font-family: 'Satisfy', cursive;
+    font-size: 3em;
+    color: rgb(247, 0, 255);
+}
+
+.description {
+    color: cyan;
+    font-size: 1.2em;
+    font-family: 'Prompt', sans-serif;
+    line-height: 1.5;
+    margin: 15px;
+    text-align: justify;
+}
+
+.icon-html {
+    font-size: 4em;
+    color: rgb(255, 94, 0);
+}
+
+.icon-html:hover {
+    color: salmon;
+}
+
+.icon-css {
+    font-size: 4em;
+    color: rgb(0, 110, 255);
+}
+
+.icon-css:hover {
+    color: cadetblue;
+}
+
+.icon-js {
+    font-size: 4em;
+    color: rgb(255, 230, 4);
+}
+
+.icon-js:hover {
+    color: rgb(255, 187, 0);
+}
+
+.icon-git {
+    font-size: 4em;
+    color: rgb(255, 72, 0);
+}
+
+.icon-git:hover {
+    color: salmon;
+}
+
+#projects {
+    height: 120vh;
+    width: 100%;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+    text-align: center;     
+}
+
+.title-projects-section {
+    color: cornsilk;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+}
+
+.title-projects {
+    color: rgb(255, 204, 0);
+    font-size: 2em;
+    font-family: 'Acme', sans-serif;  
+}
+
+.project-tile {
+    margin: 1em;
+}
+
+#projects > a {
+    width: 470px;
+    height: 230px;
+}
+
+.tribute-page {
+    width: 470px;
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    background-image: url(Tribute-page.png);
+    margin: 0 auto;
+}
+
+.tribute-page::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: right;
+}
+
+.tribute-page:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.product-landing-page {
+    width: 470px;
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    background-image: url(Product-landing-page.png);
+    margin: 0 auto;
+}
+
+.product-landing-page::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: right;
+}
+
+.product-landing-page:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.survey-form {
+    width: 470px;
+    position: relative;
+    height: 220px;
+    background-size: cover;
+    background-image: url(Survey-form.png);
+    margin: 0 auto;
+}
+
+.survey-form::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: right;
+}
+
+.survey-form:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.technical-documentation-page {
+    width: 470px;
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    background-image: url(Technical-documentatio-page.png);
+    margin: 0 auto;
+}
+
+.technical-documentation-page::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: right;
+}
+
+.technical-documentation-page:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#Proyecto1 {
+    grid-area: 1/1 / 2/2;
+}
+
+#Proyecto2 {
+    grid-area: 1/2 / 2/3;
+}
+
+#Proyecto3 {
+    grid-area: 2/1 / 3/2;
+}
+
+#Proyecto4 {
+    grid-area: 2/2 / 3/3;
+}
+
+#pre-contacto {
+    width: 100%;
+    height: 100vh;
+    
+}
+
+#contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text-contact {
+    color: cornsilk;
+    font-size: 1.4em;
+    font-family: 'Fredoka One', cursive;
+    line-height: 1.5;
+    margin: 50px;
+    
+}
+
+.text-invitation {
+    margin:  120px 90px 0 auto;
+    width: 500px;
+    text-align: justify;
+}
+
+.title-contact {
+    color: cornsilk;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    margin-bottom: 100px;
+}
+
+#form {
+    margin: 0 ;
+    color: blue;
+    font-size: 1.5em;
+    font-family: monospace;
+}
+
+.input {
+    width: 350px;
+    background-color: blanchedalmond;
+}
+
+.label {
+    color: salmon;
+}
+
+textarea {
+    resize: none;
+    height: 135px;
+}
+
+.enviar {
+    padding: 5px;
+    background-color: darkblue;
+    color: #fff;
+    transition: background 400ms ease-out, color 400ms ease-out;
+    width: 350px;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: rgb(212, 211, 211);
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        display: none;
+    }
+
+    #welcome-section {
+        all: unset;
+        /* margin: 0 160px; */
+        width: 100%;
+        height: 83vh;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #pop-up {
+        width: 65%;
+        height: 65%;
+        background-color: rgba(59, 57, 57, 0.801);
+        background-image: url(sky.jpg);
+        background-size: cover;
+        position: relative;
+    }
+
+    #projects {
+        height: 220vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-tile {
+        margin: 100px 0px;
+    }
+
+    .title-projects {
+        margin: 0 auto;
+        display: flex;
+        justify-content:center;
+    }
+
+    .tribute-page::after {
+        all: unset;
+    }
+
+    .survey-form::after {
+        all: unset;
+    }
+
+    .product-landing-page::after {
+        all: unset;
+    }
+
+    .technical-documentation-page::after {
+        all: unset;
+    }
+
+    .contenedor {
+        all: unset;
+    }
+
+    .title-contact {
+        margin: 200px 0 100px 0;
+    }
+
+    #contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+    }
+
+    #text-contact {
+        margin: 0 auto;
+    }
+}
